@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="cc">
+    <meta name="description" content="基于node+websocket的一款即时聊天工具">
+    <meta name="keyword" content="嗨聊">
+    <link rel="stylesheet" href="css/mian.css">
+    <title>嗨聊</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper" id="wrapper">
+        <div class="banner">
+            <h1>嗨聊</h1>
+            <span id="status"></span>
+        </div>
+        <div id="historyMsg">
+            <!--<video src="" id="webcam"></video>-->
+        </div>
+        <div class="controls">
+            <div class="items">
+                <input id="colorStyle" type="color" placeHolder='#000' title="字体颜色" />
+                <input id="emoji" type="button" value="表情" title="表情" />
+                <label for="sendImage" class="imageLable">
+                        <input type="button" value="图片"  />
+                        <input id="sendImage" type="file" value="image"/>
+                    </label>
+                <input type="button" value="窗口抖动" id="shake">
+                <!--<input type="button" value="视频聊天" id="videoRTC">-->
+                <input id="clearBtn" type="button" value="清除记录" title="清空消息" />
+            </div>
+            <textarea id="messageInput" placeHolder="请输入内容"></textarea>
+            <input id="sendBtn" type="button" value="发送">
+            <div id="emojiWrapper">
+            </div>
+        </div>
+    </div>
+    <div id="loginWrapper">
+        <p id="info">正在与服务器进行连接...</p>
+        <div id="nickWrapper">
+            <input type="text" placeHolder="昵称" id="nicknameInput" />
+            <input type="button" value="开聊" id="loginBtn" />
+        </div>
+    </div>
+    <script src="../node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
